@@ -4,20 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/estilos.css">
-   function enviar(){
-  var boleta = document.getElementById('boleta').value,  
-      nombre = document.getElementById('nombre').value,   
-      grupo = document.getElementById('grupo').value,   
-      materia = document.getElementById('materia').value,  
-      fecha = new Date(formu["fecha"].value),
-      miFecha;
-      miFecha = fecha.getDate() + 1 + "/"+ (fecha.getMonth() + 1) +"/"+fecha.getFullYear();
-      document.registro.boletaobt.value = boleta;
-      document.registro.nombreobt.value = nombre;
-      document.registro.grupoobt.value = grupo;
-      document.registro.materobt.value = materia;
-      document.registro.dateoobt.value = miFecha;
-    </script>
+        
+
     </head>
     <body>
         <h1>Formulario </h1>
@@ -41,6 +29,21 @@
         <footer>
             Copyright Yuliana Ortiz
         </footer>
+   <script type="text/javascript">    
+ function enviar(){
+  var boleta = document.getElementById('boleta').value,  
+      nombre = document.getElementById('nombre').value,   
+      grupo = document.getElementById('grupo').value,   
+      materia = document.getElementById('materia').value,  
+      fecha = new Date(formu["fecha"].value),
+      miFecha;
+      miFecha = fecha.getDate() + 1 + "/"+ (fecha.getMonth() + 1) +"/"+fecha.getFullYear();
+      document.registro.boletaobt.value = boleta;
+      document.registro.nombreobt.value = nombre;
+      document.registro.grupoobt.value = grupo;
+      document.registro.materobt.value = materia;
+      document.registro.dateoobt.value = miFecha;
+    </script>
      
     </body>
     
