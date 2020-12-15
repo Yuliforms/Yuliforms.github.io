@@ -1,14 +1,14 @@
-var formu = document.getElementById("formulario"),
-    salida = document.getElementById("salida");
-    
-formu.addEventListener("submit", enviar, false);
-function enviar(){
-  var boleta = formu["boleta"].value,  
-      nombre = formu["nombre"].value,  
-      grupo = formu["grupo"].value,  
-      materia = formu["materia"].value,  
+ function enviar(){
+  var boleta = document.getElementById('boleta').value,  
+      nombre = document.getElementById('nombre').value,   
+      grupo = document.getElementById('grupo').value,   
+      materia = document.getElementById('materia').value,  
       fecha = new Date(formu["fecha"].value),
       miFecha;
       miFecha = fecha.getDate() + 1 + "/"+ (fecha.getMonth() + 1) +"/"+fecha.getFullYear();
-    salida.textContent="Boleta: " + boleta + " Nombre: "+ nombre+ " Grupo: "+grupo + "Materia: "+materia+ "Fecha: "+miFecha;
-}
+      document.registro.boletaobt.value = boleta;
+      document.registro.nombreobt.value = nombre;
+      document.registro.grupoobt.value = grupo;
+      document.registro.materobt.value = materia;
+      document.registro.dateoobt.value = miFecha;
+ }
