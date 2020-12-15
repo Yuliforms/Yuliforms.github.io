@@ -4,10 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/estilos.css">
-   
+   function enviar(){
+  var boleta = document.getElementById('boleta').value,  
+      nombre = document.getElementById('nombre').value,   
+      grupo = document.getElementById('grupo').value,   
+      materia = document.getElementById('materia').value,  
+      fecha = new Date(formu["fecha"].value),
+      miFecha;
+      miFecha = fecha.getDate() + 1 + "/"+ (fecha.getMonth() + 1) +"/"+fecha.getFullYear();
+      document.registro.boletaobt.value = boleta;
+      document.registro.nombreobt.value = nombre;
+      document.registro.grupoobt.value = grupo;
+      document.registro.materobt.value = materia;
+      document.registro.dateoobt.value = miFecha;
+    </script>
     </head>
     <body>
-         <form id="formulario" action="javascript:enviar();">
         <h1>Formulario </h1>
         <hr style="color:red; background-color:red; width:100%;" />
         <p><input type="text" id="boleta" required placeholder="Boleta"></p>
@@ -23,13 +35,13 @@
          <p><output id="salidaFecha"></output></p>
         
       <p>
-        <button type="submit">Enviar</button>
+         <input type="button" id="submit" value="Enviar" onclick="enviar()">
       </p>
          </form>
         <footer>
             Copyright Yuliana Ortiz
         </footer>
-     <script src="cmp/enviar.js"></script>
+     
     </body>
     
 </html>
