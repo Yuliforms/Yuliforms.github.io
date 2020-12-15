@@ -1,8 +1,17 @@
-function enviar() {
-         const bolet = boleta.value;
-         const name = nombre.value;
-         const group = grupo.value;
-         const materi = materia.value;
-         const date = fecha.value;
-         
-        }
+"use strict";
+var forma = document.getElementById("forma"),
+    campos = ["nombre", "boleta",  "grupo", "materia",
+              "fecha"],
+    salidas = ["salidaBoleta", "salidaNombre", "salidaGrupo",
+               "salidaMateria","salidaFecha"];
+
+ 
+
+forma.addEventListener("submit", procesa, false);
+function procesa(){
+    for (var i = 0, longitud=campos.length; i < longitud; i++) {
+      var campo = forma[campos[i]];
+      var salida = document.getElementById(salidas[i]);
+      salida.value=campo.value;
+    }
+}
